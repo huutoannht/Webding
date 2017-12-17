@@ -1,0 +1,80 @@
+﻿@model WebApplication1.Models.Album
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h4>Chỉnh sửa Album</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        @using(Html.BeginForm(
+        null, null, FormMethod.Post, new { enctype="multipart/form-data"}))
+        {
+            <input type="hidden" name="AlbumId" value="@Model.AlbumID" />
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label class="control-label" for="AlbumName">Tên Album</label>
+                <input name="AlbumName" value="@Model.AlbumName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="CaptureTypeID">Chuyên mục</label>
+                @Html.DropDownList("CaptureTypeID", null, new { @class = "form-control", @required = "true" })
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <input @Html.CheckBoxFor(m => m.IsDeleted) />
+                    <label for="IsDeleted">
+                        @Html.DisplayNameFor(model => model.IsDeleted)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="image-create">Ảnh</label>
+                <div class="file-loading">
+                    <input id="image-update" name="fileImage" type="file" multiple class="file" data-overwrite-initial="false">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-default">Back to List</a>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    var existedProductAlbumFiles = @Html.Raw(Model.Images);
+    @{
+        var arProductAlbums = @Model.Images.Select(m => m.ImageUrl);
+    }
+    if (existedProductAlbumFiles == null || existedProductAlbumFiles.length === 0) {
+        $("#image-update").fileinput({
+            uploadUrl: '/file-upload-batch/2',
+            maxFilePreviewSize: 10240,
+            overwriteInitial: false,
+            showUpload: false
+        });
+    }
+    else {
+        var fileUrls = [];
+        var fileInputs = [];
+
+        for (var i = 0; i < existedProductAlbumFiles.length; i++) {
+            var image=JSON.stringify(existedProductAlbumFiles[i]);
+            fileUrls.push(existedProductAlbumFiles[i].imageUrl);
+            fileInputs.push({
+                url: "/Album/DeleteImage/" + existedProductAlbumFiles[i].imageId + "",
+                key: existedProductAlbumFiles[i].imageID
+            });
+        }
+        $("#image-update").fileinput({
+            uploadUrl: "/file-upload-batch/1",
+            uploadAsync: false,
+            maxFileCount: 50,
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            initialPreview:  fileUrls,
+            initialPreviewConfig: fileInputs
+        });
+    }
+</script>

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebApplication1.Models.CaptureType>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!-- Title -->
+<div class="row heading-bg">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        @Html.ActionLink("Thêm mới chuyên mục", "Create", new {  }, new { @class = "btn btn-success" })
+    </div>
+    <!-- Breadcrumb -->
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="#"><span>table</span></a></li>
+            <li class="active"><span>Chuyên mục</span></li>
+        </ol>
+    </div>
+    <!-- /Breadcrumb -->
+</div>
+<!-- /Title -->
+<!-- Row -->
+<div class="col-sm-12">
+    <div class="panel panel-default card-view">
+        <div class="panel-heading">
+            <div class="pull-left">
+                <h6 class="panel-title txt-dark"> Danh sách chuyên mục</h6>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="panel-wrapper collapse in">
+            <div class="panel-body">
+                @if (Model.Count() == 0)
+                {
+                    <div class="alert alert-success alert-dismissable alert-style-1">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <i class="zmdi zmdi-check"></i>Câu hỏi chưa tạo.
+                    </div>
+                }
+                else
+                {
+                    <div class="table-wrap">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered mb-0 data-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                           Tên chuyên mục
+                                        </th>
+                                        <th>
+                                           Trạng thái
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.CaptureTypeName)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IsDelete)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.CaptureTypeID }, new { @class = "btn btn-warning" })
+                                                @if (!item.IsDelete)
+                                                {
+                                                    <a onclick="deleteRecord('@item.CaptureTypeID','Category')" class="btn btn-danger">Xóa</a>
+                                                }
+                                              
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@using WebApplication1.Models
+
+@model LoginViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<div class="row">
+    <div class="col-sm-12 col-xs-12">
+        <div class="mb-30">
+            <h3 class="text-center txt-dark mb-10">Sign in to Jetson</h3>
+            <h6 class="text-center nonecase-font txt-grey">Enter your details below</h6>
+        </div>
+        <div class="form-wrap">
+            <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label class="control-label mb-10" for="Email">Email address</label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label class="pull-left control-label mb-10" for="Password">Password</label>
+                    <a class="capitalize-font txt-primary block mb-10 pull-right font-12" href="forgot-password.html">forgot password ?</a>
+                    <div class="clearfix"></div>
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-info  btn-rounded">sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

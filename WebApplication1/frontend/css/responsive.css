@@ -1,0 +1,513 @@
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+    /* Header */
+    .logo-area {
+        text-align: center;
+        display: block;
+    }
+    .main-menu  {
+        text-align: center;
+    }
+    
+    /* wedding info */
+    
+    .single-info-heading i {
+        font-size: 24px;
+    }
+    .single-info-heading p {
+        font-size: 16px;
+    }
+    .single-info-heading h3.block {
+        font-size: 20px;
+    }
+    .single-info-heading {
+        padding: 43px 0;
+    }
+    
+    /* About */
+    
+    .aout-text h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .aout-text a {
+        margin-top: 21px;
+    }
+    
+    /* stories */
+    
+    .stories-txt h3 {
+        margin: 15px 0;
+    }
+    .stories-txt a {
+        margin-top: 65px;
+    }
+    
+    /* Testimonial */
+    
+    .testimonial-img {
+        height: 190px;
+    }
+    
+    /* blog */
+    
+    .blog-txt h3 {
+        font-size: 20px;
+    }
+    
+    /* Package */
+    
+    .package-hdr .lvl-txt h3 {
+        font-size: 20px;
+    }
+    .package-hdr .price-txt h3 {
+        font-size: 30px;
+    }
+    
+    /* about page */
+    
+    .misson-vision-txt {
+        margin-top: 580px;
+    }
+    
+    /* Wedding singl page */
+    
+    .single-stories-page::after {
+        width: calc(50% + 242px);
+    }
+    
+    /* Photgrapher page */
+    
+    .photographer-page-single .photographer-caro-txt {
+        padding-top: 15px;
+    }
+    .photographer-single-txt {
+        padding-top: 0;
+    }
+    .photographer-single-txt p {
+        margin-bottom: 15px;
+    }
+    .photographer-single-txt h3 {
+        margin-top: 30px;
+    }
+    
+    /* Contact page */
+    
+    .contact-area {
+        background-size: 1025px auto;
+    }
+    .contact-form {
+        padding: 50px;
+    }
+    
+    
+}
+@media only screen and (max-width: 991px) {
+    
+    /* Wedding info */
+
+    .wedding-info-area::after {
+        width: 0;
+    }
+    .wedding-info-area .col-md-9 {
+        padding: 0;
+    }
+    .wedding-info-area .container {
+        width: 100%;
+    }
+    .stories-img img {
+        width: 100%;
+    }
+    
+    /* Photographer */
+    
+    .photographer-caro-dots .owl-dots {
+        display: none;
+    }
+    
+    /* Offer area */
+
+    .offer-content h3 span,
+    .offer-content h2 {
+        font-size: 50px;
+    }
+    .offer-content h3 {
+        font-size: 40px;
+    }
+    
+    /* Testimonial */
+
+    .testimonial-caro {
+        background-image: none;
+    }
+    .testimonial-caro-bg {
+        background: transparent url(./img/testimonial/testimonial-caro-bg.png) top center no-repeat;
+        background-size: cover;
+    }
+    
+    /* Blog */
+
+    .blog-img img {
+        width: 100%;
+    }
+    
+    /* Footer */
+
+    .fotter-top-area .footer-widgets {
+        padding-top: 0;
+    }
+    .fotter-top-area .col-md-3:first-child .footer-widgets {
+        padding-top: 75px;
+    }
+    
+    /* About page */
+    
+    .about-main-txt {
+        margin-left: 0;
+        margin-top: 70px;
+        padding: 90px 20px;
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
+    .misson-vision-txt {
+        margin-top: 60px;
+    }
+    
+    /* Wedding singl page */
+    
+    .stories-page-txt {
+        margin-bottom: 70px;
+    }
+    .single-stories-page::after {
+        width: 0%;
+    }
+    
+    /* Testimonial page */
+    
+    .testimonial-page-single-img {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    /* Blog page */
+    
+    .blog-sidebar {
+        margin-top: 90px;
+    }
+    .single-sidebar {
+        display: block;
+    }
+    
+    /* Contact page */
+
+    .contact-area {
+        background-image: none;
+    }
+    
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    /* header */
+    
+    .banner-content h1 {
+        font-size: 80px;
+    }
+    
+    /* Photographer */
+    
+    .photographer-caro {
+        background-image: none;
+    }
+    .photographer-caro-img {
+        background: url(../img/photographer/frame.png) 0 0 no-repeat;
+        background-size: contain;
+        text-align: center;
+        display: inline-block;
+    }
+    .photographer-page-single,
+    .single-photographer-caro {
+        text-align: center;
+    }
+    .photographer-caro-txt h2::after {
+        left: 50%;
+        margin-left: -35px;
+    }
+    
+    /* Gallery */
+    
+    .swiper-slide {
+        width: 70%;
+    }
+    .swiper-gallery-prev i {
+        left: 15%;
+    }
+    .swiper-gallery-next i {
+        right: 15%;
+    }
+    
+    /* Package */
+    .single-package {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    
+    /* Tesimonial page */
+    .testimonial-page-single-txt {
+        text-align: center;
+    }
+    .testimonial-page-single-txt h3::after {
+        left: 50%;
+        margin-left: -35px;
+    }
+    .about-bride-groom {
+        text-align: center;
+    }
+    
+    /* Blog page */
+    
+    .single-popular-post .no-padding {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Contact page */
+    .contact-form {
+        padding: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    /* Global style */
+    
+    .section-padding {
+        padding-top: 125px;
+    }
+    .section-title {
+        padding: 0;
+    }
+    .section-title h2 {
+        font-size: 30px;
+    }
+    .bg-title {
+        display: none;
+    }
+    .theme-pagination li a {
+        padding: 5px 14px;
+    }
+    .theme-btn {
+        padding: 8px 25px;
+    }
+    
+    /* main-header-area */
+    
+    .hdr-info ul li {
+        margin-bottom: 10px;
+    }
+    .hdr-social {
+        text-align: left;
+    }
+    .hdr-social ul li {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    
+    /* main-banner-area */
+    
+    .banner-content {
+        padding: 0;
+    }
+    .banner-content h1 {
+        font-size: 36px;
+    }
+    
+    /* About */
+    
+    .aout-text {
+        margin-top: 40px;
+    }
+    .aout-text h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .aout-text a {
+        margin-top: 25px;
+    }
+    .about-img {
+        margin-top: 40px;
+    }
+    
+    /* Stories */
+    
+    .stories-area {
+        padding-top: 30px;
+    }
+    .stories-txt h3 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+    .stories-txt a {
+        margin-top: 30px;
+    }
+    
+    /* video area */
+    
+    .video-txt h2 {
+        font-size: 30px;
+    }
+    
+    /* Photographer */
+    
+    .photographer-caro {
+        margin-top: 40px;
+    }
+    .photographer-single-img,
+    .photographer-caro-img {
+        padding: 40px;
+    }
+    .photographer-caro-txt {
+        padding-top: 37px;
+    }
+    
+    /* helo area */
+    
+    .hello-content h2 {
+        font-size: 30px;
+    }
+    
+    /* Gallery */
+    
+    .gallery-tab-nav ul li a {
+        margin: 5px 0;
+        padding: 15px 65px;
+    }
+    .swiper-slide {
+        width: 100%;
+    }
+    .gallery-tab-nav {
+        padding-top: 40px;
+    }
+    .swiper-gallery-prev i, .swiper-gallery-next i {
+        font-size: 20px;
+        height: 40px;
+        line-height: 39px;
+        margin-top: -30px;
+        width: 40px;
+    }
+    .swiper-gallery-prev i {
+        left: 12%;
+    }
+    .swiper-gallery-next i {
+        right: 12%;
+    }
+    .gallery-tab-txt h3 {
+        font-size: 20px;
+    }
+    
+    /* package */
+    
+    .package-hdr .lvl-txt h3 {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+    .package-hdr .price-txt h3 {
+        font-size: 30px;
+        padding-right: 10px;
+    }
+    
+    /* Blog */
+    
+    .blog-txt h3 {
+        font-size: 16px;
+    }
+    .single-blog {
+        padding: 10px;
+    }
+    .single-recent-blog-post {
+        padding: 10px;
+    }
+    .recent-blog-post-txt h3 {
+        font-size: 16px;
+    }
+    .recent-blog-post-hvr a {
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        width: 50px;
+    }
+    
+    /* Footer */
+    
+    .copy-right-txt,
+    .designby {
+        text-align: center;
+    }
+    
+    /* About us page */
+    
+    .about-main-txt h3 {
+        font-size: 20px;
+        padding: 0;
+    }
+    .about-main-txt {
+        border-width: 5px;
+        padding: 50px 15px;
+    }
+    
+    /* Wedding singl page */
+
+    .mes-grid {
+        width: 100%;
+    }
+    
+    /* Photographer page */
+    
+    .photographer-page-area .photographer-caro-txt a {
+        margin-top: 30px;
+    }
+    .single-photographer-awd, .single-photographer-edu {
+        padding-left: 55px;
+    }
+    
+    /* Testimonial */
+    
+    .testimonial-page-single-img img,
+    .about-bride-groom img {
+        width: 100%;
+    }
+    
+    /* Contact page */
+    .contact-form {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    /* Global */
+    
+    .theme-pagination li a {
+        padding: 10px 15px;
+    }
+    
+    /* Wedding singl page */
+
+    .mes-grid {
+        width: 50%;
+        
+    }
+    
+    /* B;og page */
+    
+    .next-post img,
+    .prev-post img {
+        width: 100px;
+    }
+    
+    /* Contact page */
+    .contact-form {
+        padding: 20px;
+    }
+}

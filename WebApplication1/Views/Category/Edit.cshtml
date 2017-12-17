@@ -1,0 +1,38 @@
+﻿@model WebApplication1.Models.CaptureType
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h4>Chỉnh sửa chuyên mục</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4 col-md-offset-2">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CaptureTypeID" />
+            <div class="form-group">
+                <label class="control-label" for="CaptureTypeName">Tên chuyên mục</label>
+                <input asp-for="CaptureTypeName" class="form-control" />
+                <span asp-validation-for="CaptureTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <input asp-for="IsDelete" />
+                    <label for="IsDelete">
+                        @Html.DisplayNameFor(model => model.IsDelete)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <a class="btn btn-default" asp-action="Index">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+  
+</div>
